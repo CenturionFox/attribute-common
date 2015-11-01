@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E68E673-6BC1-4421-B9F3-3E6DF75DFC73}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Attribute.Hooks.Windows</RootNamespace>
+    <AssemblyName>Attribute.Hooks.Windows</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>G:\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Codes\WinHookCbtCode.cs" />
+    <Compile Include="Codes\WinHookCode.cs" />
+    <Compile Include="Codes\WinHookMessageCode.cs" />
+    <Compile Include="Codes\WinHookShellCode.cs" />
+    <Compile Include="Event\Generic\HookExecutionEventArgs.cs" />
+    <Compile Include="Event\Generic\HookExecutionEventHandler.cs" />
+    <Compile Include="Event\HookExecutionEventArgs.cs" />
+    <Compile Include="Event\HookExecutionEventHandler.cs" />
+    <Compile Include="Exceptions\WinHookException.cs" />
+    <Compile Include="Exceptions\WinSysErrorCodes.cs" />
+    <Compile Include="Exceptions\WinSysErrorCodesExtensions.cs" />
+    <Compile Include="Exceptions\WinSysException.cs" />
+    <Compile Include="Input\Event\KeyboardHookExecutionEventArgs.cs" />
+    <Compile Include="Input\Event\KeyboardHookExecutionEventHandler.cs" />
+    <Compile Include="Input\Event\LowLevelKeyboardHookExecutionEventArgs.cs" />
+    <Compile Include="Input\Event\LowLevelKeyboardHookExecutionEventHandler.cs" />
+    <Compile Include="Input\Event\LowLevelMouseHookExecutionEventArgs.cs" />
+    <Compile Include="Input\Event\LowLevelMouseHookExecutionEventHandler.cs" />
+    <Compile Include="Input\Event\MouseHookExecutionEventArgs.cs" />
+    <Compile Include="Input\Event\MouseHookExecutionEventHandler.cs" />
+    <Compile Include="Input\KeyboardHook.cs" />
+    <Compile Include="Input\KeyboardHookStructure.cs" />
+    <Compile Include="Input\LowLevelKeyboardHookStructure.cs" />
+    <Compile Include="Input\LowLevelMouseHook.cs" />
+    <Compile Include="Input\LowLevelMouseHookStructure.cs" />
+    <Compile Include="Input\LowLevelMouseHookXButtonFlags.cs" />
+    <Compile Include="Input\MouseHook.cs" />
+    <Compile Include="Input\MouseHookStructure.cs" />
+    <Compile Include="Input\NonClientHitTestResult.cs" />
+    <Compile Include="Interop\Messages\KeyboardMessage.cs" />
+    <Compile Include="Interop\Messages\MouseMessage.cs" />
+    <Compile Include="Interop\NativeMethods\Point.cs" />
+    <Compile Include="Interop\NativeMethods\Rect.cs" />
+    <Compile Include="Interop\SetWindowPositionFlags.cs" />
+    <Compile Include="Interop\SetWindowPositionInsertAfterType.cs" />
+    <Compile Include="Interop\ShowWindowFlags.cs" />
+    <Compile Include="Interop\Win32Window.cs" />
+    <Compile Include="Interop\WinSysUtility.cs" />
+    <Compile Include="Interop\WinWindowUtility.cs" />
+    <Compile Include="IWinHook.cs" />
+    <Compile Include="IWinHookForm.cs" />
+    <Compile Include="LowLevelKeyboardHookFlags.cs" />
+    <Compile Include="WinHookBase.cs" />
+    <Compile Include="WinHookProcedure.cs" />
+    <Compile Include="WinHookType.cs" />
+    <Compile Include="WinHookUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Attribute.Common\Attribute.Common.csproj">
+      <Project>{A12D21BC-80A4-4A66-9260-ED41C363E37C}</Project>
+      <Name>Attribute.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
