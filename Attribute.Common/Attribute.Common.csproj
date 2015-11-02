@@ -44,7 +44,7 @@
     <Compile Include="Attributes\Enumeration\DisplayValueAttribute.cs" />
     <Compile Include="Attributes\Enumeration\DataValueAttribute.cs" />
     <Compile Include="Attributes\SystemSoundAttribute.cs" />
-    <Compile Include="Data\JsonObject.cs" />
+    <Compile Include="Data\JsonUtility.cs" />
     <Compile Include="Enumeration\TimeUnit.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
