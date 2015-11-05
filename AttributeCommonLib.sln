@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attribute.Common", "Attribu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attribute.Hooks.Windows", "Attribute.Hooks\Attribute.Hooks.Windows.csproj", "{4E68E673-6BC1-4421-B9F3-3E6DF75DFC73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attribute.Speech", "Attribute.Speech\Attribute.Speech.csproj", "{59128BFC-A186-47B8-8A82-F5906D25D13F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4E68E673-6BC1-4421-B9F3-3E6DF75DFC73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E68E673-6BC1-4421-B9F3-3E6DF75DFC73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E68E673-6BC1-4421-B9F3-3E6DF75DFC73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59128BFC-A186-47B8-8A82-F5906D25D13F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59128BFC-A186-47B8-8A82-F5906D25D13F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59128BFC-A186-47B8-8A82-F5906D25D13F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59128BFC-A186-47B8-8A82-F5906D25D13F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
